@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, View } from 'react-native';
-import App from './App';
 import { StackNavigator, TabNavigator } from 'react-navigation';
-import Home from './screens/homeScreen';
-import List from './screens/listScreen';
+import Home from '../screens/homeScreen';
+import List from '../screens/listScreen';
 
+export default class cClove extends Component {
+  render() {
+      return (
+        <Home />
+        );
+    }
+  }
 
 
    const SimpleApp = TabNavigator({
@@ -16,15 +21,10 @@ import List from './screens/listScreen';
     },
   },
    List: {
-      screen: App,
+      screen: List,
       navigtionOptions: {
         tabBarLabel: 'List'
       },
     },
 
 })
-
-
-
-
-AppRegistry.registerComponent('cCLove', () => SimpleApp);
