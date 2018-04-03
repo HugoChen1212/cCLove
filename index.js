@@ -1,7 +1,7 @@
 import { AppRegistry } from 'react-native';
-import { SimpleApp } from './config/router';
+import { MainNavigator } from './config/router';
 
 
 
 
-AppRegistry.registerComponent('cCLove', () => SimpleApp);
+AppRegistry.registerComponent('cCLove', () => MainNavigator);
