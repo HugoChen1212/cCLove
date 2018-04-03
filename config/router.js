@@ -16,7 +16,7 @@ import Setting from '../screens/settingScreen';
         List: { screen: List },
         Favor: { screen: StackNavigator({
           Favor: { screen: Favor },
-          settings: { screen: Setting }
+          Setting: { screen: Setting }
         })
       }
       })
