@@ -7,7 +7,11 @@ import { Button } from 'react-native-elements';
 class FavorScreen extends Component {
   static navigationOptions = {
     title: 'Favor',
-    headerRight: <Button title="Setting"/>
+    headerRight: <Button
+      title="Setting"
+      backgroundColor="rgba(0,0,0,0)"
+      color="rgba(0,122,255,1)"
+    />
   }
 
   render() {
