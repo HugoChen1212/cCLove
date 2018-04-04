@@ -6,6 +6,7 @@ import List from '../screens/listScreen';
 import Favor from '../screens/favorScreen';
 import Welcome from '../screens/welcomeScreen';
 import Setting from '../screens/settingScreen';
+import Auth from '../screens/auth';
 
 
 
@@ -23,6 +24,7 @@ import Setting from '../screens/settingScreen';
 
   export const MainNavigator = TabNavigator({
     Welcome: { screen: Welcome},
+    Auth: { screen: Auth },
     main: {
       screen: TabNavigator({
         Home: { screen: Home },
