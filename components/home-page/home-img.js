@@ -6,13 +6,17 @@ const styles = StyleSheet.create({
     stretch: {
     width: 350,
     height: 250
+  },
+  imgContainer:{
+    flex:1,
+    alignItems: 'center'
   }
 });
 
 class HomeImgs extends Component {
   render() {
     return (
-      <View>
+      <View style={styles.imgContainer}>
         <Image
           style={styles.stretch}
           source={require('../../imgs/Hera.jpeg')}
