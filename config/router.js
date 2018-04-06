@@ -22,12 +22,19 @@ import Auth from '../screens/auth';
       Setting: {screen: Setting }
   });
 
+  export const HomeStack = StackNavigator ({
+    Home: {screen: Home,
+      navigationOptions:{
+        title: 'Home'}
+    }
+  });
+
   export const MainNavigator = TabNavigator({
     Welcome: { screen: Welcome},
     Auth: { screen: Auth },
     main: {
       screen: TabNavigator({
-        Home: { screen: Home },
+        Home: { screen: HomeStack },
         List: { screen: List },
         Favor: { screen: FavorStack }
       })
