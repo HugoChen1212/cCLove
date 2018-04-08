@@ -2,11 +2,12 @@ import React from 'react';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 import { View, Text } from 'react-native';
 import Home from '../screens/homeScreen';
-import List from '../screens/listScreen';
+import SearchScreen from '../screens/searchScreen';
 import Favor from '../screens/favorScreen';
 import Welcome from '../screens/welcomeScreen';
 import Setting from '../screens/settingScreen';
 import Auth from '../screens/auth';
+import List from '../screens/listScreen'
 
 
 
@@ -29,13 +30,22 @@ import Auth from '../screens/auth';
     }
   });
 
+
+   export const SearchStack = StackNavigator ({
+    Search: {screen: SearchScreen,
+      navigationOptions:{
+        title: 'Search'}
+    },
+    List: {screen: List }
+  });
+
   export const MainNavigator = TabNavigator({
     Welcome: { screen: Welcome},
     Auth: { screen: Auth },
     main: {
       screen: TabNavigator({
         Home: { screen: HomeStack },
-        List: { screen: List },
+        Search: { screen: SearchStack },
         Favor: { screen: FavorStack }
       })
   }

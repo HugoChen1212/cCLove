@@ -16,7 +16,7 @@ class WelcomeScreen extends Component {
   }
 
    componentDidMount() {
-    axios.get("http://api.petfinder.com/pet.get?key=dbeaf4be86fcf7cfe093d67eef6689b7&id=38356287&format=json").then( response => {
+    axios.get().then( response => {
       console.log(response);
      }).catch(error => {
         console.log(error);
